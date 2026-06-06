@@ -1,0 +1,48 @@
+@keyframes etra-shimmer-rtl {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.etra-skeleton {
+  border-radius: 8px;
+  background: linear-gradient(90deg, #f3f4f6 0%, #e5e7eb 50%, #f3f4f6 100%);
+  background-size: 200% 100%;
+  animation: etra-shimmer-rtl 1.2s ease-in-out infinite;
+}
+
+.etra-skeleton--text {
+  height: 14px;
+  width: 100%;
+}
+
+.etra-skeleton--title {
+  height: 20px;
+  width: 60%;
+}
+
+.etra-skeleton--avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.etra-skeleton--image {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  border-radius: var(--radius-card);
+}
+
+.etra-skeleton-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.etra-skeleton-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}

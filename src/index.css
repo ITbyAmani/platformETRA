@@ -1,0 +1,226 @@
+@import './theme/tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-ui);
+  font-size: var(--fs-body);
+  line-height: 1.7;
+  font-weight: var(--fw-regular);
+  color: var(--text-secondary);
+  background: var(--bg-page);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--text-brand);
+  text-decoration: none;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+}
+
+code,
+pre,
+.kbd {
+  font-family: var(--font-code);
+  font-size: var(--fs-code);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Typography scale — Section 3.2 */
+.etra-display {
+  font-size: var(--fs-display);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+.etra-h1 {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  line-height: 1.25;
+  color: var(--text-primary);
+}
+
+.etra-h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  line-height: 1.3;
+  color: var(--text-primary);
+}
+
+.etra-h3 {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  line-height: 1.35;
+  color: var(--text-primary);
+}
+
+.etra-h4 {
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-semibold);
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+
+.etra-body-lg {
+  font-size: var(--fs-body-lg);
+  font-weight: var(--fw-regular);
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.etra-body {
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.etra-small {
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.etra-xs {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-regular);
+  line-height: 1.5;
+  color: var(--text-placeholder);
+}
+
+.etra-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+/* Responsive — Section 11 */
+@media (max-width: 1279px) {
+  :root {
+    --sidebar-width: 200px;
+  }
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --sidebar-width: 72px;
+  }
+}
+
+@media (max-width: 767px) {
+  .etra-container {
+    padding-inline: 16px;
+  }
+
+  .etra-display {
+    font-size: 36px;
+  }
+
+  .etra-h1 {
+    font-size: 32px;
+  }
+
+  .etra-h2 {
+    font-size: 26px;
+  }
+}
+
+/* Page layout helpers — Section 11 responsive */
+@media (max-width: 1023px) {
+  .store-layout,
+  .store-page__layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .dash-grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .dash-grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .dash-two-col,
+  .about-grid,
+  .blog-featured,
+  .auth-split,
+  .lesson-layout,
+  .community-layout,
+  .chat-split,
+  .profile-layout,
+  .editor-split,
+  .code-split {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .pricing-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

@@ -1,0 +1,43 @@
+.etra-table-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: auto;
+}
+
+.etra-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px;
+}
+
+.etra-table th {
+  background: var(--bg-table-header);
+  font-size: 13px;
+  font-weight: var(--fw-semibold);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  height: 44px;
+  padding: 0 16px;
+  text-align: start;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.etra-table td {
+  font-size: 15px;
+  color: var(--text-secondary);
+  height: 56px;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--border-default);
+  vertical-align: middle;
+}
+
+.etra-table tbody tr:hover {
+  background: var(--bg-table-hover);
+}
+
+.etra-table tbody tr:last-child td {
+  border-bottom: none;
+}

@@ -1,0 +1,363 @@
+.mentor-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: end;
+  margin-bottom: 22px;
+  padding: clamp(24px, 4vw, 36px);
+  border-radius: 28px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.2), transparent 30%),
+    linear-gradient(135deg, #5234b7 0%, #9e59cd 100%);
+  box-shadow: 0 24px 58px rgba(82, 52, 183, 0.22);
+}
+
+.mentor-hero h2 {
+  max-width: 760px;
+  margin: 16px 0 0;
+  color: #fff;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.35;
+}
+
+.mentor-hero p {
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.mentor-hero__actions,
+.mentor-inline-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mentor-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.mentor-stats--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-bottom: 22px;
+}
+
+.mentor-grid {
+  display: grid;
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.mentor-grid--home,
+.mentor-grid--student,
+.mentor-grid--sessions,
+.mentor-grid--notes,
+.mentor-grid--assignments,
+.mentor-grid--earnings,
+.mentor-grid--profile {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.mentor-card {
+  border-color: rgba(82, 52, 183, 0.12);
+  box-shadow: 0 18px 42px rgba(82, 52, 183, 0.08);
+}
+
+.mentor-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.mentor-card__head h3 {
+  margin: 0;
+  color: #111827;
+  font-size: 21px;
+  font-weight: var(--fw-bold);
+}
+
+.mentor-list {
+  display: grid;
+  gap: 12px;
+}
+
+.mentor-list__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 16px;
+  background: #fbfaff;
+  border: 1px solid rgba(82, 52, 183, 0.08);
+}
+
+.mentor-list__item strong,
+.mentor-list__item span {
+  display: block;
+}
+
+.mentor-list__item strong {
+  color: #111827;
+}
+
+.mentor-list__item span,
+.mentor-muted {
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.mentor-chart {
+  height: 280px;
+}
+
+.mentor-filters {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.mentor-person {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mentor-progress {
+  min-width: 150px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.mentor-progress::before {
+  content: '';
+  grid-column: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(82, 52, 183, 0.12);
+}
+
+.mentor-progress span {
+  grid-column: 1;
+  grid-row: 1;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #5234b7 0%, #9e59cd 100%);
+}
+
+.mentor-progress strong {
+  color: #5234b7;
+  font-size: 13px;
+}
+
+.mentor-student-hero {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 18px;
+  align-items: center;
+  padding: 24px;
+  border-radius: 24px;
+  background: #fff;
+  border: 1px solid rgba(82, 52, 183, 0.12);
+  box-shadow: 0 18px 42px rgba(82, 52, 183, 0.08);
+}
+
+.mentor-student-hero h2 {
+  margin: 0;
+  color: #111827;
+  font-size: 28px;
+}
+
+.mentor-student-hero p {
+  margin: 6px 0 14px;
+  color: #64748b;
+}
+
+.mentor-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.mentor-road-row,
+.mentor-question-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 14px;
+  background: #fbfaff;
+  margin-bottom: 10px;
+}
+
+.mentor-road-row span,
+.mentor-question-row span {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(135deg, #5234b7 0%, #9e59cd 100%);
+  font-weight: var(--fw-bold);
+}
+
+.mentor-editor {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.4fr);
+  gap: 22px;
+}
+
+.mentor-editor--quiz {
+  grid-template-columns: minmax(220px, 0.6fr) minmax(0, 1.5fr);
+}
+
+.mentor-course-tree details {
+  padding: 12px;
+  border-radius: 14px;
+  background: #fbfaff;
+  margin-bottom: 10px;
+}
+
+.mentor-course-tree summary {
+  cursor: pointer;
+  color: #111827;
+  font-weight: var(--fw-bold);
+}
+
+.mentor-course-tree p {
+  margin: 10px 16px 0 0;
+  color: #64748b;
+}
+
+.mentor-form-grid,
+.mentor-answer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.mentor-upload,
+.mentor-submission-preview,
+.mentor-code-box {
+  margin: 16px 0;
+  padding: 22px;
+  border-radius: 18px;
+  background: #fbfaff;
+  border: 1px dashed rgba(82, 52, 183, 0.24);
+  color: #64748b;
+}
+
+.mentor-code-box {
+  display: grid;
+  gap: 10px;
+  direction: ltr;
+  text-align: left;
+}
+
+.mentor-code-box code {
+  white-space: pre-wrap;
+  color: #5234b7;
+}
+
+.mentor-calendar {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mentor-calendar button {
+  min-height: 58px;
+  border: 1px solid rgba(82, 52, 183, 0.12);
+  border-radius: 14px;
+  background: #fff;
+  color: #64748b;
+  font-family: var(--font-ui);
+}
+
+.mentor-calendar button.is-available {
+  color: #15803d;
+  background: rgba(34, 197, 94, 0.12);
+  border-color: rgba(34, 197, 94, 0.32);
+}
+
+.mentor-calendar button.is-booked {
+  color: #fff;
+  background: linear-gradient(135deg, #5234b7 0%, #9e59cd 100%);
+}
+
+.mentor-checklist {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.mentor-checklist label {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #fbfaff;
+  color: #475569;
+}
+
+.mentor-profile-card {
+  text-align: center;
+}
+
+.mentor-profile-card h3 {
+  margin: 14px 0 0;
+  color: #111827;
+  font-size: 24px;
+}
+
+.mentor-profile-card p {
+  color: #64748b;
+}
+
+@media (max-width: 1023px) {
+  .mentor-hero,
+  .mentor-grid--home,
+  .mentor-grid--student,
+  .mentor-grid--sessions,
+  .mentor-grid--notes,
+  .mentor-grid--assignments,
+  .mentor-grid--earnings,
+  .mentor-grid--profile,
+  .mentor-editor,
+  .mentor-editor--quiz {
+    grid-template-columns: 1fr;
+  }
+
+  .mentor-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .mentor-stats,
+  .mentor-stats--three,
+  .mentor-filters,
+  .mentor-form-grid,
+  .mentor-answer-grid,
+  .mentor-student-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .mentor-list__item,
+  .mentor-card__head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,608 @@
+/* المتجر — هوية إترا (#5234B7 → #9E59CD) */
+.store-page {
+  flex: 1;
+  background: #fafbff;
+}
+
+.store-page__hero {
+  position: relative;
+  padding: clamp(36px, 5vw, 52px) 0 clamp(28px, 4vw, 40px);
+  overflow: hidden;
+  background: linear-gradient(180deg, #fafbff 0%, #ffffff 52%, #f8f5ff 100%);
+  border-bottom: 1px solid #f0eef8;
+}
+
+.store-page__hero::before {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(52px);
+  opacity: 0.42;
+  background: rgba(158, 89, 205, 0.28);
+  inset-inline-end: -6%;
+  top: -12%;
+  pointer-events: none;
+}
+
+.store-page__hero::after {
+  content: '';
+  position: absolute;
+  width: 220px;
+  height: 160px;
+  border-radius: 50%;
+  filter: blur(44px);
+  opacity: 0.32;
+  background: rgba(82, 52, 183, 0.2);
+  inset-inline-start: -4%;
+  bottom: -18%;
+  pointer-events: none;
+}
+
+.store-page__hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 720px;
+}
+
+.store-page__badge {
+  display: inline-block;
+  margin: 0 0 12px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: var(--fw-semibold);
+  color: #6d28d9;
+  background: rgba(167, 139, 250, 0.2);
+  border: 1px solid rgba(158, 89, 205, 0.28);
+  border-radius: 999px;
+}
+
+.store-page__title {
+  margin: 0 0 10px;
+  font-size: clamp(26px, 3.2vw, 38px);
+  font-weight: var(--fw-extrabold);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #5234b7 0%, #9e59cd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.store-page__lead {
+  margin: 0;
+  font-size: clamp(15px, 1.75vw, 17px);
+  line-height: 1.65;
+  color: #64748b;
+}
+
+.store-page__filter-chip {
+  display: inline-flex;
+  margin-top: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: var(--fw-semibold);
+  color: #5b21b6;
+  background: rgba(82, 52, 183, 0.08);
+  border: 1px solid rgba(82, 52, 183, 0.2);
+}
+
+.store-page__main {
+  padding: clamp(28px, 4vw, 40px) 0 clamp(48px, 6vw, 72px);
+}
+
+.store-page__layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 270px) minmax(0, 1fr);
+  gap: clamp(20px, 3vw, 28px);
+  align-items: start;
+}
+
+/* الشريط الجانبي — فلاتر */
+.store-sidebar {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e8eaef;
+  box-shadow:
+    0 4px 24px rgba(82, 52, 183, 0.07),
+    0 1px 3px rgba(15, 23, 42, 0.05);
+}
+
+.store-sidebar::before {
+  content: '';
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, #5234b7 0%, #9e59cd 100%);
+}
+
+.store-sidebar__inner {
+  padding: 20px 20px 22px;
+}
+
+.store-sidebar__title {
+  margin: 0 0 6px;
+  font-size: 17px;
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+}
+
+.store-sidebar__section-label {
+  margin: 14px 0 0;
+  font-size: 12px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #7c3aed;
+}
+
+.store-sidebar__check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  line-height: 1.45;
+}
+
+.store-sidebar__check input {
+  margin-top: 3px;
+  accent-color: #5234b7;
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+}
+
+.store-sidebar__actions {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.store-sidebar__btn-reset {
+  margin-top: 0;
+}
+
+/* منطقة الدورات */
+.store-page__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 20px;
+  padding: 14px 18px;
+  background: #fff;
+  border: 1px solid #e8eaef;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
+}
+
+.store-page__count {
+  font-size: 15px;
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+}
+
+.store-page__count span {
+  background: linear-gradient(135deg, #5234b7, #9e59cd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.store-page__sort .etra-field {
+  margin: 0;
+  min-width: 180px;
+}
+
+.store-page__sort .etra-field__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.store-page__sort .etra-select {
+  border-radius: 12px;
+  border: 1px solid #e3e6ec;
+  min-height: 44px;
+  width: 100%;
+}
+
+.store-page__sort .etra-select:focus {
+  border-color: rgba(82, 52, 183, 0.45);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(82, 52, 183, 0.1);
+}
+
+.store-page__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+@media (max-width: 1100px) {
+  .store-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .store-page__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ——— متجر الاشتراكات ——— */
+.store-subs__cross {
+  margin: 16px 0 0;
+}
+
+.store-subs__cross-link {
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
+  color: #5234b7;
+  text-decoration: none;
+}
+
+.store-subs__cross-link:hover {
+  text-decoration: underline;
+}
+
+.store-subs__toggle-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.store-subs__toggle-wrap {
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid #e8eaef;
+  box-shadow: 0 2px 12px rgba(82, 52, 183, 0.06);
+}
+
+.store-subs__toggle {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
+  font-family: var(--font-ui);
+  color: #64748b;
+  background: transparent;
+  border-radius: 999px;
+  transition:
+    color 0.15s ease,
+    background 0.15s ease;
+}
+
+.store-subs__toggle--active {
+  color: #fff;
+  background: linear-gradient(135deg, #5234b7 0%, #9e59cd 100%);
+  box-shadow: 0 4px 14px rgba(82, 52, 183, 0.25);
+}
+
+.store-subs__toggle-hint {
+  display: inline-block;
+  margin-inline-start: 4px;
+  font-size: 12px;
+  font-weight: var(--fw-semibold);
+  opacity: 0.95;
+}
+
+.store-subs__cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  margin-bottom: clamp(40px, 5vw, 56px);
+}
+
+.store-subs-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 22px 22px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #e8eaef;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+}
+
+.store-subs-card--featured {
+  border-color: rgba(82, 52, 183, 0.45);
+  box-shadow:
+    0 12px 40px rgba(82, 52, 183, 0.14),
+    0 2px 8px rgba(15, 23, 42, 0.04);
+  transform: translateY(-4px);
+}
+
+.store-subs-card__badge-wrap {
+  margin-bottom: 10px;
+}
+
+.store-subs-card__name {
+  margin: 0;
+  font-size: 22px;
+  font-weight: var(--fw-extrabold);
+  color: var(--text-primary);
+}
+
+.store-subs-card__desc {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.store-subs-card__price {
+  margin: 18px 0 0;
+  padding: 14px 0 16px;
+  border-top: 1px solid #f0eef8;
+  border-bottom: 1px solid #f0eef8;
+}
+
+.store-subs-card__amount {
+  font-size: clamp(26px, 3vw, 34px);
+  font-weight: var(--fw-extrabold);
+  background: linear-gradient(135deg, #5234b7 0%, #9e59cd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.store-subs-card__period {
+  margin-inline-start: 6px;
+  font-size: 14px;
+  font-weight: var(--fw-semibold);
+  color: var(--text-muted);
+}
+
+.store-subs-card__domains {
+  margin-top: 14px;
+}
+
+.store-subs-card__domains-label {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.04em;
+  color: #7c3aed;
+}
+
+.store-subs-card__domains ul {
+  margin: 0;
+  padding: 0 18px 0 0;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+}
+
+.store-subs-card__features {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.store-subs-card__features li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: #fafbff;
+}
+
+.store-subs-card__feat-label {
+  color: var(--text-secondary);
+}
+
+.store-subs-card__feat-val {
+  font-weight: var(--fw-semibold);
+  color: #5234b7;
+  flex-shrink: 0;
+}
+
+.store-subs-card__cta {
+  margin-top: 18px;
+}
+
+.store-subs-compare__title {
+  margin: 0 0 16px;
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+}
+
+.store-subs-compare__scroll {
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid #e8eaef;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04);
+}
+
+.store-subs-compare__table {
+  width: 100%;
+  min-width: 520px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.store-subs-compare__table th,
+.store-subs-compare__table td {
+  padding: 14px 16px;
+  text-align: start;
+  border-bottom: 1px solid #f0eef8;
+}
+
+.store-subs-compare__table thead th {
+  background: linear-gradient(180deg, #faf8ff 0%, #fff 100%);
+  font-weight: var(--fw-bold);
+  color: #5234b7;
+}
+
+.store-subs-compare__table tbody th {
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+}
+
+.store-subs-compare__table tbody td {
+  color: var(--text-secondary);
+}
+
+.store-subs-compare__table tr:last-child th,
+.store-subs-compare__table tr:last-child td {
+  border-bottom: none;
+}
+
+.store-subs-compare__note {
+  margin: 14px 0 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+@media (max-width: 960px) {
+  .store-subs__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .store-subs-card--featured {
+    transform: none;
+  }
+}
+
+/* ——— متجر المنتجات: بحث وفلاتر ونافذة ——— */
+.store-products__search-block .etra-field {
+  margin: 0 0 14px;
+}
+
+.store-products__select-wrap .etra-field {
+  margin: 0 0 12px;
+}
+
+.store-products__select-wrap .etra-select {
+  width: 100%;
+  min-height: 44px;
+  border-radius: 12px;
+  border: 1px solid #e3e6ec;
+}
+
+.store-products__empty {
+  margin: 0;
+  padding: 36px 20px;
+  text-align: center;
+  font-size: 15px;
+  color: var(--text-muted);
+  background: #fff;
+  border: 1px dashed #e2e8f0;
+  border-radius: 14px;
+}
+
+.store-products-modal__body {
+  text-align: start;
+}
+
+.store-products-modal__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.store-products-modal__lead {
+  margin: 0 0 16px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.store-products-modal__dl {
+  margin: 0 0 18px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #fafbff;
+  border: 1px solid #f0eef8;
+  display: grid;
+  gap: 10px;
+}
+
+.store-products-modal__dl > div {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.store-products-modal__dl dt {
+  margin: 0;
+  font-weight: var(--fw-bold);
+  color: #7c3aed;
+}
+
+.store-products-modal__dl dd {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.store-products-modal__h3 {
+  margin: 0 0 8px;
+  font-size: 15px;
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+}
+
+.store-products-modal__bullets {
+  margin: 0;
+  padding: 0 18px 0 0;
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.store-products-modal__bullets li {
+  margin-bottom: 6px;
+}
+
+.store-products-modal__footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+}
+
+.store-products-modal__price {
+  font-size: 18px;
+  font-weight: var(--fw-extrabold);
+  color: #5234b7;
+}
+
+.store-products-modal__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

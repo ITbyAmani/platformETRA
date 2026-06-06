@@ -1,0 +1,85 @@
+/* ETRA v2.0 — Section 3.1–3.3 design tokens */
+
+:root {
+  /* Brand */
+  --color-primary: #5234b7;
+  --color-secondary: #9e59cd;
+  --color-gradient: linear-gradient(135deg, #5234b7 0%, #9e59cd 100%);
+  --color-primary-hover: #4228a0;
+
+  /* Backgrounds */
+  --bg-page: #ffffff;
+  --bg-section-alt: #f8f5ff;
+  --bg-section-gray: #f9fafb;
+  --bg-card: #ffffff;
+  --bg-input: #ffffff;
+  --bg-sidebar: #ffffff;
+  --bg-topbar: #ffffff;
+  --bg-table-header: #f3f4f6;
+  --bg-table-hover: #f8f5ff;
+  --bg-tag-purple: #ede9fe;
+  --bg-tag-green: #dcfce7;
+  --bg-tag-amber: #fef3c7;
+  --bg-tag-red: #fee2e2;
+
+  /* Text */
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #6b7280;
+  --text-placeholder: #9ca3af;
+  --text-brand: #5234b7;
+  --text-on-primary: #ffffff;
+
+  /* Borders */
+  --border-default: #e5e7eb;
+  --border-strong: #d1d5db;
+  --border-focus: #5234b7;
+
+  /* Status */
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-error: #dc2626;
+  --color-info: #2563eb;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 8px 24px rgba(82, 52, 183, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-navbar: 0 1px 0 #e5e7eb;
+  --shadow-navbar-scroll: 0 2px 12px rgba(0, 0, 0, 0.08);
+  --shadow-modal: 0 20px 60px rgba(0, 0, 0, 0.15);
+  --shadow-dropdown: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+  /* Layout */
+  --container-max: 1200px;
+  --sidebar-width: 240px;
+  --topbar-height: 64px;
+  --public-nav-height: 80px;
+  --radius-button: 8px;
+  --radius-input: 8px;
+  --radius-card: 14px;
+  --radius-card-lg: 16px;
+  --radius-modal: 16px;
+  --radius-pill: 20px;
+
+  /* Typography — Cairo + JetBrains Mono */
+  --font-ui: 'Cairo', system-ui, sans-serif;
+  --font-code: 'JetBrains Mono', ui-monospace, monospace;
+
+  --fs-display: 48px;
+  --fs-h1: 40px;
+  --fs-h2: 32px;
+  --fs-h3: 24px;
+  --fs-h4: 20px;
+  --fs-body-lg: 18px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+  --fs-xs: 12px;
+  --fs-label: 14px;
+  --fs-code: 14px;
+
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+}

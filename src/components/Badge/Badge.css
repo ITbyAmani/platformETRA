@@ -1,0 +1,42 @@
+.etra-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: var(--fw-semibold);
+  line-height: 1.4;
+  width: fit-content;
+}
+
+.etra-badge--brand {
+  background: var(--bg-tag-purple);
+  color: var(--text-brand);
+  border: 1px solid #c4b5fd;
+}
+
+.etra-badge--success {
+  background: var(--bg-tag-green);
+  color: #15803d;
+}
+
+.etra-badge--warning {
+  background: var(--bg-tag-amber);
+  color: #b45309;
+}
+
+.etra-badge--error {
+  background: var(--bg-tag-red);
+  color: var(--color-error);
+}
+
+.etra-badge--gray {
+  background: #f3f4f6;
+  color: var(--text-secondary);
+}
+
+.etra-badge--info {
+  background: #dbeafe;
+  color: #1d4ed8;
+}

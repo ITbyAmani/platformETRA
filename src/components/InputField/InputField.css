@@ -1,0 +1,67 @@
+.etra-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.etra-field__label {
+  font-size: var(--fs-label);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+}
+
+.etra-field__hint {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.etra-field__error {
+  font-size: var(--fs-small);
+  color: var(--color-error);
+}
+
+.etra-input,
+.etra-select,
+.etra-textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: var(--radius-input);
+  border: 1.5px solid var(--border-default);
+  background: var(--bg-input);
+  font-size: 15px;
+  color: var(--text-primary);
+  text-align: start;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.etra-textarea {
+  min-height: 120px;
+  padding: 12px 14px;
+  resize: vertical;
+}
+
+.etra-input::placeholder,
+.etra-textarea::placeholder {
+  color: var(--text-placeholder);
+}
+
+.etra-input:focus-visible,
+.etra-select:focus-visible,
+.etra-textarea:focus-visible {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(82, 52, 183, 0.12);
+}
+
+.etra-input--error,
+.etra-textarea--error {
+  border-color: var(--color-error);
+}
+
+.etra-input--success {
+  border-color: var(--color-success);
+}

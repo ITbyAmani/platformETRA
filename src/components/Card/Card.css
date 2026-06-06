@@ -1,0 +1,32 @@
+.etra-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  transition:
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.etra-card--interactive:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(82, 52, 183, 0.3);
+  transform: translateY(-2px);
+}
+
+.etra-card--flush-top {
+  padding-top: 0;
+  overflow: hidden;
+}
+
+.etra-card__thumb {
+  aspect-ratio: 16 / 9;
+  background: var(--bg-section-gray);
+  margin: -1px -1px 0;
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+  object-fit: cover;
+  width: calc(100% + 2px);
+  max-width: none;
+}

@@ -1,0 +1,27 @@
+.etra-page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.etra-page-header__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.etra-page-header__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.etra-page-header__meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
